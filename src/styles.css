@@ -1,0 +1,74 @@
+/* General Styles */
+.App {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .form-container {
+    margin-top: 20px;
+  }
+  
+  /* Transition styles (already added) */
+  .fade-enter {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .fade-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 500ms ease-in, transform 500ms ease-in;
+  }
+  
+  .fade-exit {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .fade-exit-active {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 500ms ease-out, transform 500ms ease-out;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 600px) {
+    .App {
+      padding: 0 15px;
+    }
+  
+    .form-container {
+      width: 100%;
+      padding: 10px;
+      box-shadow: none;
+    }
+  
+    .question-container, .final-step {
+      padding: 10px;
+    }
+  
+    button {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(68, 117, 74); /* Green color */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    display: none; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Show footer when scrolled */
+  .footer.visible {
+    display: block;
+    opacity: 1;
+  }
+  

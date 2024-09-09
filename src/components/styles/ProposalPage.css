@@ -1,0 +1,94 @@
+.proposal-container {
+  width: 100%;
+  height: 70vh;
+  background-image: url('../../../public/images/backgroundpink.jpg');
+  /* background-image: url('../../../public/images/backgroundpink.jpg'); */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  padding: 0px;
+}
+
+.proposal-message {
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  margin-bottom: 30px;
+  animation: fadeIn 1s ease-in;
+}
+
+.response-buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px; 
+}
+
+.yes-button {
+  padding: 15px 30px; /* More padding for a comfortable click area */
+  background-color: #ff4081; /* A more vivid pink color */
+  color: white;
+  font-size: 1.2em;
+  border-radius: 50px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adding a shadow for depth */
+  margin-right: 10px !important;
+  margin-left: 10px !important;
+}
+
+.yes-button:hover {
+  background-color: #ff80ab; /* Slightly lighter on hover */
+  transform: scale(1.1); /* Slight enlargement on hover */
+}
+
+.heart-beat {
+  animation: heartbeat 1.5s infinite;
+}
+
+.sub-message {
+  color: #ffebee;
+  font-style: italic;
+}
+
+@keyframes heartbeat {
+  0%, 20%, 50%, 80%, 100% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.1);
+  }
+  60% {
+    transform: scale(1.05);
+  }
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

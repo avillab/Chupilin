@@ -1,0 +1,76 @@
+/* Container to remove default padding and margin */
+.MuiContainer-root {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100vw;
+  height: auto;
+  overflow: hidden;
+}
+
+/* Parallax container */
+.parallax-container {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* Parallax section */
+.parallax-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Increase the minimum height */
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  text-align: center;
+  background-attachment: fixed; /* Parallax effect for desktop */
+}
+
+/* Section-specific backgrounds */
+#section1 {
+  background-image: url('../../public/images/chikisyyo.PNG');
+}
+
+#section2 {
+  background-image: url('../../public/images/chikismono.JPG');
+}
+
+#section3 {
+  background-image: url('../../public/images/chikispeluca.jpg');
+}
+
+/* Content styling */
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px; /* Increase padding for more space */
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  max-width: 90%;
+  min-width: 60%;
+  box-sizing: border-box;
+}
+
+/* Ensure text boxes are properly adjusted */
+.content h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 600px) {
+  .parallax-section {
+    background-attachment: scroll; /* Fallback for mobile */
+  }
+
+  .content {
+    padding: 10px;
+  }
+}
